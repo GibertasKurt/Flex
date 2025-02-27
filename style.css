@@ -1,0 +1,58 @@
+main {
+    font-size: 3rem;
+    display:flex;
+    flex-direction:column;
+}
+main div {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 60px);
+}
+.one {
+    order:2;
+    width: calc(50% - 60px);
+    background-color: blue;
+    align-self: flex-end;
+}
+.two {
+    width: calc(50% - 60px);
+    background-color: red;
+    align-self:flex-start;
+}
+.threefour-container {
+    min-width: 100%;
+    padding: 0;
+    order:4;
+    display: flex;
+}
+.three {
+    background-color: green;
+    align-self:flex-start;
+}
+.four {
+    background-color: yellow;
+    align-self:flex-end;
+}
+.five {
+    order:3;
+    background-color: violet;
+    align-self:stretch;
+
+}
+@media (max-width: 512px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    main {
+        flex-direction: column;
+    }
+    .threefour-container {
+        flex-direction: column;
+    }
+    .one, .two, .three, .four, .five {
+        width: calc(100% - 60px);
+        align-self: stretch;
+    }
+}
