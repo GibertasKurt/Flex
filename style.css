@@ -49,9 +49,11 @@ main div {
         flex-direction: column;
     }
     .threefour-container {
+        order: 0;
         flex-direction: column;
     }
     .one, .two, .three, .four, .five {
+        order: 0;
         width: calc(100% - 60px);
         align-self: stretch;
     }
